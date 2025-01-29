@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import ProfileImg from "../assets/images/1.jpeg";
+import Profile from "../assets/images/2.jpeg";
+import ProfileImg from "../assets/images/2.jpg";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
 import BehanceSvg from "../assets/images/svg/behance-svg.svg";
 import DribleSvg from "../assets/images/svg/drribale-svg.svg";
@@ -346,15 +347,15 @@ const Home = () => {
               </div>
             </div>
             <div className="col-xxl-6 col-lg-6 position-relative">
-              {/* <img className="flower" src={FlowerImg} alt="flower" />
+              <img className="flower" src={FlowerImg} alt="flower" />
               <img
                 className="circular-img"
                 src={CircularImg}
                 alt="circular-img"
-              /> */}
+              />
               <img
                 className="jessica-main-img zoom_in"
-                src={JessicaMainImg}
+                src={Profile}
                 alt="jessica-main-img"
               />
               <div className="worked-box">
@@ -470,13 +471,13 @@ const Home = () => {
         <Services />
         {/* <!-- ====================================== Section Services ===================================== --> */}
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
-        <Portfolio />
+        {/* <Portfolio /> */}
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
-        <Pricing />
+        {/* <Pricing /> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
-        <Blog />
+        {/* <Blog /> */}
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
         {/* <!-- ====================================== Section Contact ===================================== --> */}
         <Contact />

@@ -1,0 +1,142 @@
+/* Technical Skills Section */
+.technical-skill-section {
+    padding: 60px 20px;
+  
+    color: #fff; /* White text for contrast */
+    animation: fadeInSection 1s ease-out; /* Section animation */
+  }
+  
+  /* Section Heading */
+  .heading-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-heading-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ecf0f1; /* Light gray text */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .line {
+    width: 60px;
+    height: 4px;
+    background-color: #2ecc71; /* Green color */
+    margin: 0 auto;
+  }
+  
+  /* Technical Skills Subsection */
+  .technical-skill-sub-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    animation: fadeInSubSection 1.5s ease-out; /* Subsection animation */
+  }
+  
+  /* Individual Skill Block */
+  .technical-skills-img-main {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: rotateX(-60deg);
+    transition: all 2s;
+  }
+  
+  .technical-skills-img-main.show {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+  
+  .technical-skills-img-main:hover {
+    transform: rotateY(-40deg) rotateX(20deg); /* Tilt effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for hover */
+    transition: all 2s;
+  }
+  .technical-skills-img-main img {
+    max-width: 90px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .skill-counter-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-percentage {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2ecc71; /* Green color */
+    margin-bottom: 10px;
+  }
+  
+  .skill-counter-main p {
+    font-size: 16px;
+    color: #ecf0f1; /* Light gray text */
+    margin-top: 5px;
+  }
+  
+  /* Animations */
+  @keyframes flipUp {
+    0% {
+      opacity: 0;
+      transform: rotateY(180deg) translateY(20px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: rotateY(90deg) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(0) translateY(0);
+    }
+  }
+  
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInSubSection {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsiveness for Smaller Screens */
+  @media (max-width: 768px) {
+    .technical-skill-sub-section {
+      justify-content: center;
+    }
+  
+    .technical-skills-img-main {
+      width: 200px;
+      padding: 20px;
+    }
+  
+    .section-heading-text {
+      font-size: 28px;
+    }
+  
+    .skill-percentage {
+      font-size: 24px;
+    }
+  }
+  

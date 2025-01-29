@@ -30,12 +30,15 @@ const AboutSection = () => {
           <div className="line"></div>
         </div>
         <p className="section-sub-text about-sub-text zoom_in">
-          With a strong foundation in software development and artificial intelligence, I specialize in design-
-          ing robust software systems, developing intelligent algorithms, and integrating backend solutions
-          using Python, TensorFlow, Django, and Node.js. I have successfully built scalable, data-driven ap-
-          plications and implemented advanced AI frameworks to solve real-world challenges. My expertise
-          spans software engineering, computer vision, and machine learning, with a proven ability to deliver
-          innovative and impactful solutions in both research and professional settings.
+          With a strong foundation in software development and artificial
+          intelligence, I specialize in design- ing robust software systems,
+          developing intelligent algorithms, and integrating backend solutions
+          using Python, TensorFlow, Django, and Node.js. I have successfully
+          built scalable, data-driven applications and implemented advanced AI
+          frameworks to solve real-world challenges. My expertise spans software
+          engineering, computer vision, and machine learning, with a proven
+          ability to deliver innovative and impactful solutions in both research
+          and professional settings.
         </p>
         <div className="about-detail-main">
           <p className="about-detail">Name</p>
@@ -49,7 +52,7 @@ const AboutSection = () => {
           <p className="about-detail">Phone</p>
           <p
             className="about-detail-info email"
-            onClick="location.href='tel:(+233)593778113'"
+            onClick="location.href='tel:+233593778113'"
           >
             (+233) 059 377 8113
           </p>
@@ -74,7 +77,12 @@ const AboutSection = () => {
         {/* <div className="about-detail-main">
           <p className="about-detail">Skype</p>
           <p className="about-detail-info">hello.biogi</p>
-        </div> */}
+        </div> */
+        }
+        <div className="about-detail-main">
+          <p className="about-detail">Location</p>
+          <p className="about-detail-info">Accra, Ghana</p>
+        </div>
         <div className="about-detail-main">
           <p className="about-detail">Language</p>
           <p className="about-detail-info">English</p>

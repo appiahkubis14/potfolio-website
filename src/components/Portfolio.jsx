@@ -15,7 +15,7 @@ import YouTubeModal from "./YouTubeVideo";
 import VimeoModal from "./VimeoModal";
 import SoundCloudModal from "./SoundCloudVideo";
 
-import $ from "jquery";
+// import $ from "jquery";
 
 import Galleryimg1 from "../assets/images/gallery/gallery-img1.jpg";
 import Galleryimg2 from "../assets/images/gallery/gallery-img2.jpg";

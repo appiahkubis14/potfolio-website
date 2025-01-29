@@ -51,7 +51,7 @@ function App() {
             {/* <!-- ====================================== Preloader ===================================== --> */}
             {loading && (
               <div className="page-loader">
-                <img src={LoaderGif} alt="loader" />
+                <img src={LoaderGif} alt="loader" style={{ width: "300px" }}/>
               </div>
             )}
             {/* <!-- ====================================== Preloader End ===================================== --> */}

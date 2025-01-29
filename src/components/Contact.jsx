@@ -72,7 +72,7 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">EMAIL</p>
               <p className="contact-email">
-                <a href="mailto:hello@biogi.com">hello@biogi.com</a>
+                <a href="mailto:appiahksamuel21@gmail.com">appiahksamuel21@gmail.com</a>
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">PHONE</p>
               <p className="contact-email">
-                <a href="tel:+12345678899">+1 234 567 8899</a>
+                <a href="tel:(+233)593778113">(+233) 059 377 8113</a>
               </p>
             </div>
           </div>
@@ -174,9 +174,9 @@ const Contact = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="footer">
-          © 2024 | All rights reserved by
+          © 2025 | All rights reserved by
           <span>
-            <a href="https://1.envato.market/website-portfolio">The_Krishna</a>
+            <a href="#"> Samuel Appiah Kubi</a>
           </span>
         </div>
       </section>

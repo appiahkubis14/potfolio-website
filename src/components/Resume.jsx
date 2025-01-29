@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FigmaImg from "../assets/images/figma-img.png";
 import PhotoShopImg from "../assets/images/photoshop-img.png";
 import AdobeImg from "../assets/images/adobe-xd-img.png";
@@ -19,6 +19,17 @@ import vision from "../assets/images/vision.png"
 import tensorflow from "../assets/images/4.png"
 import ML from "../assets/images/ML.jpg"
 import tableau from "../assets/images/tableau.jpg"
+import PythonImg from "../assets/images/python.png"; // Replace with actual image path
+import TableauImg from "../assets/images/TableauImg.png";
+import OpenCVImg from "../assets/images/OpenCVImg.png";
+import DjangoImg from "../assets/images/DjangoImg.png";
+import QGISImg from "../assets/images/QGISImg.jpeg";
+import GitImg from "../assets/images/GitImg.webp";
+import DatabaseImg from "../assets/images/DatabaseImg.png";
+import js from "../assets/images/js.png";
+import arcgis from "../assets/images/arcgis.webp";
+import '../components/technicalSkills.css';
+
 
 const Resume = () => {
   const colors = [
@@ -29,6 +40,9 @@ const Resume = () => {
     "#6F39FD",
     "#FF7D61",
   ];
+
+
+  
   // const progressRef = useRef(null);
   // const hasAnimated = useRef(false); // Track if the animation has already run
 
@@ -68,6 +82,39 @@ const Resume = () => {
   //   return () => observer.disconnect();
   // }, [colors]);
 
+  const skills = [
+    { id: 1, img: PythonImg, label: "Python, R, MATLAB", percentage: 95 },
+    { id: 2, img: TableauImg, label: "Data Visualization", percentage: 90 },
+    { id: 3, img: OpenCVImg, label: "Computer Vision", percentage: 88 },
+    { id: 4, img: DjangoImg, label: "Dart, Flutter, Django", percentage: 92 },
+    { id: 5, img: QGISImg, label: "QGIS, ArcGIS Pro", percentage: 96 },
+    { id: 6, img: GitImg, label: "Git, VSCode", percentage: 85 },
+    { id: 7, img: DatabaseImg, label: "PostgreSQL, MySQL", percentage: 90 },
+    { id: 8, img: js, label: "Javascript,JQuery", percentage: 90 },
+    { id: 9, img: arcgis, label: "ArcGIS Pro", percentage: 90 },
+  ];
+  
+  const [skillLevels, setSkillLevels] = useState(
+    skills.map((skill) => ({ id: skill.id, currentPercentage: 0 }))
+  );
+
+useEffect(() => {
+  skillLevels.forEach((_, index) => {
+    const interval = setInterval(() => {
+      setSkillLevels((prevLevels) =>
+        prevLevels.map((level) =>
+          level.id === skills[index].id && level.currentPercentage < skills[index].percentage
+            ? { ...level, currentPercentage: level.currentPercentage + 1 }
+            : level
+        )
+      );
+    }, 20);
+
+    // Cleanup intervals on unmount
+    return () => clearInterval(interval);
+  });
+}, []);
+
   return (
     <>
       {/* <!-- ====================================== Section Education Experience ===================================== --> */}
@@ -87,17 +134,17 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Software Engineer</p>
+                <p className="bachelor">Software Engineer - Full Stack Developer</p>
                 <p className="cursus university">
                   Afarinick Company Limited
                 </p>
                 <p className="cursus">
                   <ul>
                     <li>• Developed scalable and dynamic websites using JavaScript, Django,
-                      Python, and jQuery.</li>
+                          Python, and jQuery.</li>
                     <li>
                       • Integrated AWS for cloud services and deployment to enhance web
-                      performance and accessibility.
+                        performance and accessibility.
                     </li>
                     <li>• Collaborated with teams to optimize user experience and ensure responsive designs.</li>
                   </ul>
@@ -119,7 +166,7 @@ const Resume = () => {
                   <ul>
                     <li>
                       • Designed and developed a Pothole Detection and Reporting mobile
-                      app using Flutter and Dart
+                        app using Flutter and Dart
                     </li>
                     <li>
                       • Integrated AI models for real-time and static image pothole detection with location data.
@@ -149,7 +196,7 @@ const Resume = () => {
                   <ul>
                     <li>
                       • Designed and developed the GhIS-SS mobile app using Flutter to
-                      streamline communication and resources for surveyors.
+                        streamline communication and resources for surveyors.
                     </li>
                     <li>
                       • Integrated geolocation, real-time updates, and user-friendly interfaces for enhanced usability.
@@ -185,7 +232,7 @@ const Resume = () => {
                   <ul>
                     <li>
                       • Collaborated on highway and urban road projects, contributing to
-                      planning, design, and analysis
+                        road planning, design, and analysis
                     </li>
                     <li>
                       • Utilized GIS software (QGIS, ArcGIS Pro) for spatial analysis, mapping, and drafting.
@@ -274,52 +321,29 @@ const Resume = () => {
 
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-      {/* <section className="design-skill-section">
-        <div className="heading-container">
-          <h2 className="section-heading-text design-skill-text fade_up">
-            Design Skills.
-          </h2>
-          <div className="line"></div>
-        </div>
-        <div className="design-skill-sub-section">
-          <div className="design-skills-img-main flip_up">
-            <img src={FigmaImg} alt="figma-img" />
-            <div className="skill-counter-main">
-              <p>94%</p>
-              <p>HTML, CSS</p>
-            </div>
-          </div>
-          <div className="design-skills-img-main photoshop flip_up">
-            <img src={PhotoShopImg} alt="photoshop-img" />
-            <div className="skill-counter-main photoshop-text">
-              <p>98%</p>
-              <p>PHOTOSHOP</p>
-            </div>
-          </div>
-          <div className="design-skills-img-main adobe-xd flip_up">
-            <img src={AdobeImg} alt="adobe-xd-img" />
-            <div className="skill-counter-main adobe-xd-text">
-              <p>88%</p>
-              <p>ADOBE XD</p>
-            </div>
-          </div>
+      <section className="technical-skill-section">
+      <div className="heading-container">
+        <h2 className="section-heading-text technical-skill-text fade_up">
+          Technical Skills.
+        </h2>
+        <div className="line"></div>
+      </div>
+      <div className="technical-skill-sub-section">
+        {skills.map((skill) => {
+          const currentLevel = skillLevels.find((level) => level.id === skill.id)?.currentPercentage || 0;
 
-          <div className="design-skills-img-main sketch flip_up">
-            <img src={SketchImg} alt="sktech-img" />
-            <div className="skill-counter-main sketch-text">
-              <p>85%</p>
-              <p>SKETCH</p>
+          return (
+            <div key={skill.id} className="technical-skills-img-main flip_up">
+              <img src={skill.img} alt={`${skill.label.toLowerCase().replace(/ /g, "-")}-img`} />
+              <div className="skill-counter-main">
+                {/* <p className="skill-percentage">{currentLevel}%</p> */}
+                <p style={{ color: skill.color , fontWeight: "bold", fontSize: "20px"}}>{skill.label}</p>
+              </div>
             </div>
-          </div>
-          <div className="design-skills-img-main invision flip_up">
-            <img src={InvisionImg} alt="invision-img" />
-            <div className="skill-counter-main invision-text">
-              <p>89%</p>
-              <p>INVISION</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
+          );
+        })}
+      </div>
+    </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Award ===================================== --> */}
       <section className="awards-section overflow-hidden">
@@ -330,6 +354,34 @@ const Resume = () => {
           <div className="line"></div>
         </div>
         <div className="row awards-row">
+        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+            <div className="box-item flip_up">
+              <div className="flip-box">
+                <div className="flip-box-front">
+                  <div className="inner">
+                    <div className="years-award-img">
+                      <img
+                        className="winner-award"
+                        src={tensorflow}
+                        alt="winner-award4"
+                        style={{ width: "30%" }}
+                      />
+                      <p className="award-yer">2022</p>
+                    </div>
+                    <p className="award-interior">Crop Detection and Counting</p>
+                    <p className="award-winner-text">Python, OpenCV, TensorFlow, YOLOv8</p>
+                  </div>
+                </div>
+                <div className="flip-box-back">
+                  <div className="inner">
+                    <p className="flip-back-text">
+                      Implemented a computer vision application to detect and count crops using image processing and YOLOv8. Automated crop monitoring for better agricultural management.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="box-item flip_up">
               <div className="flip-box">
@@ -387,34 +439,7 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={po_fl_dj}
-                        alt="winner-award3"
-                        style={{ width: '30%' }}
-                      />
-                      <p className="award-yer">2023</p>
-                    </div>
-                    <p className="award-interior">QR Code Scanner App for Afarinick Company Limited</p>
-                    <p className="award-winner-text">Flutter (Frontend), Django (Backend), PostgreSQL</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Built a QR Code Scanner application to verify member details and inventory assets. Enabled quick database queries for user ID and asset ID validation. Ensured efficient data verification and management for the company’s operations.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="box-item flip_up">
               <div className="flip-box">
@@ -528,34 +553,7 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={tensorflow}
-                        alt="winner-award4"
-                        style={{ width: "30%" }}
-                      />
-                      <p className="award-yer">2022</p>
-                    </div>
-                    <p className="award-interior">Crop Detection and Counting</p>
-                    <p className="award-winner-text">Python, OpenCV, TensorFlow, YOLOv8</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Implemented a computer vision application to detect and count crops using image processing and YOLOv8. Automated crop monitoring for better agricultural management.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="box-item flip_up">
               <div className="flip-box">
@@ -607,6 +605,34 @@ const Resume = () => {
                   <div className="inner">
                     <p className="flip-back-text">
                       Created interactive dashboards using Tableau to visualize retail sales data, providing insights into sales trends, product performance, and customer behavior. This enabled data-driven decision-making through comprehensive data analysis and visualization.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+            <div className="box-item flip_up">
+              <div className="flip-box">
+                <div className="flip-box-front">
+                  <div className="inner">
+                    <div className="years-award-img">
+                      <img
+                        className="winner-award"
+                        src={po_fl_dj}
+                        alt="winner-award3"
+                        style={{ width: '30%' }}
+                      />
+                      <p className="award-yer">2023</p>
+                    </div>
+                    <p className="award-interior">QR Code Scanner App for Afarinick Company Limited</p>
+                    <p className="award-winner-text">Flutter (Frontend), Django (Backend), PostgreSQL</p>
+                  </div>
+                </div>
+                <div className="flip-box-back">
+                  <div className="inner">
+                    <p className="flip-back-text">
+                      Built a QR Code Scanner application to verify member details and inventory assets. Enabled quick database queries for user ID and asset ID validation. Ensured efficient data verification and management for the company’s operations.
                     </p>
                   </div>
                 </div>

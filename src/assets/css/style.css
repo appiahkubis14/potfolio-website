@@ -94,7 +94,7 @@ ul li {
     position: fixed;
     top: 0;
     left: 0;
-    background: #0F141C;
+    /* background: #0F141C; */
     z-index: 1000;
     overflow: hidden;
     display: flex;
