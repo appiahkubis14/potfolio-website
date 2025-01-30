@@ -67,7 +67,7 @@ const Services = () => {
               <div className="services-img services-img4">
                 <img src={UiUxSvg} alt="app-development" />
               </div>
-              <p className="services-text services-text4">DATA SCIENCE</p>
+              <p className="services-text services-text4">ARTIFICIAL INTELLIGENCE & DATA SCIENCE</p>
               <p className="molestie">
                 I analyze complex datasets, create predictive models, and build impactful visualizations using Python, TensorFlow, and Tableau, empowering businesses with data-driven decisions.
               </p>

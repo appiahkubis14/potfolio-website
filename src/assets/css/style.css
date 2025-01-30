@@ -1682,7 +1682,7 @@ li.slick-active {
 }
 
 .blog-img-section {
-    background-image: url('../images/blog-img1.png');
+    background-image: url('../images/conf.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1700,11 +1700,11 @@ li.slick-active {
 }
 
 .blog-img-section2 {
-    background-image: url('../images/blog-img2.png');
+    background-image: url('../images/tutor.jpeg');
 }
 
 .blog-img-section3 {
-    background-image: url('../images/blog-img3.png');
+    background-image: url('../images/committee.png');
 }
 
 .blog-date {

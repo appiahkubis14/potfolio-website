@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import Profile from "../assets/images/2.jpeg";
 import ProfileImg from "../assets/images/2.jpg";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
@@ -32,25 +33,31 @@ import AboutSection from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
-import Pricing from "./Pricing";
+import Works from "./works";
 import Blog from "./Blog";
 import Contact from "./Contact";
 import $ from "jquery";
 import CV from "../assets/pdf/Samuel_Appiah_Kubi_CV_Final_January_update.pdf";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
   //Text
-  const firstTexts = ["Data Analytic", "Developer", "Freelancer","GIS Analytic"];
+  const firstTexts = [
+    "Data Analytic",
+    "Developer",
+    "Freelancer",
+    "GIS Analytic",
+  ];
   const secondTexts = [
     "Freelancer",
     "Back-End Web Developer",
     "Full Stack Developer",
     "Mobile Developer",
     "GIS Analyst",
-    "Data Analyst"
+    "Data Analyst",
   ];
+
+  const iconStyle = { color: "#A0A0A0", transition: "color 0.3s" };
 
   const intervalTime = 600;
   const [firstTextIndex, setFirstTextIndex] = useState(0);
@@ -63,14 +70,12 @@ const Home = () => {
     return () => clearTimeout(firstTextTimeout);
   }, [firstTextIndex]);
 
-
   useEffect(() => {
     const secondTextTimeout = setTimeout(() => {
       setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
     }, intervalTime * 3);
     return () => clearTimeout(secondTextTimeout);
   }, [secondTextIndex]);
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,7 +85,6 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, []);
-
 
   // Logo marquee
   useEffect(() => {
@@ -166,25 +170,35 @@ const Home = () => {
           </h1> */}
           <h2 className="designer fade_up">{firstTexts[firstTextIndex]}</h2>
           <div className="profile-media-icons-main fade_up">
-            <Link to="mailto:hello@biogi.com" className="profile-media-icons">
-              <img src={EmailSvg} alt="email-svg" />
+            <Link
+              to="mailto:appiahksamuel21@gmail.com"
+              className="profile-media-icons"
+            >
+              <FaEnvelope size={24} style={iconStyle} />
             </Link>
-            <Link to="https://www.behance.net" className="profile-media-icons">
-              <img src={BehanceSvg} alt="behance-svg" />
+            <Link to="tel:+233593778113" className="profile-media-icons">
+              <FaPhone size={24} style={iconStyle} />
             </Link>
-            <Link to="https://dribbble.com" className="profile-media-icons">
-              <img src={DribleSvg} alt="drribale-svg" />
+            <Link
+              to="https://www.linkedin.com/in/samuel-appiah-kubi"
+              className="profile-media-icons"
+            >
+              <FaLinkedin size={24} style={iconStyle} />
             </Link>
-            <Link to="https://medium.com" className="profile-media-icons">
-              <img src={MediumSvg} alt="medium-svg" />
+            <Link
+              to="https://github.com/appiahkubis14"
+              className="profile-media-icons"
+            >
+              <FaGithub size={24} style={iconStyle} />
             </Link>
           </div>
         </div>
         <div className="menu-list-main">
           <ul>
             <li
-              className={`active-menu-action ${activeLink === "home" ? "active" : ""
-                }`}
+              className={`active-menu-action ${
+                activeLink === "home" ? "active" : ""
+              }`}
             >
               <a
                 className="fade_right"
@@ -196,8 +210,9 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${activeLink === "about" ? "active" : ""
-                }`}
+              className={`active-menu-action ${
+                activeLink === "about" ? "active" : ""
+              }`}
             >
               <a
                 className="fade_right"
@@ -209,8 +224,23 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${activeLink === "resume" ? "active" : ""
-                }`}
+              className={`active-menu-action ${
+                activeLink === "portfolio" ? "active" : ""
+              }`}
+            >
+              <a
+                className="fade_right"
+                href="#portfolio"
+                onClick={(e) => handleClick(e, "portfolio")}
+              >
+                <img src={PortfolioSvg} alt="home-svg" />
+                Skills
+              </a>
+            </li>
+            <li
+              className={`active-menu-action ${
+                activeLink === "resume" ? "active" : ""
+              }`}
             >
               <a
                 className="fade_right"
@@ -222,8 +252,24 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${activeLink === "services" ? "active" : ""
-                }`}>
+              className={`active-menu-action ${
+                activeLink === "pricing" ? "active" : ""
+              }`}
+            >
+              <a
+                className="fade_right"
+                href="#pricing"
+                onClick={(e) => handleClick(e, "pricing")}
+              >
+                <img src={PricingSvg} alt="home-svg" />
+                Works
+              </a>
+            </li>
+            <li
+              className={`active-menu-action ${
+                activeLink === "services" ? "active" : ""
+              }`}
+            >
               <a
                 className="fade_right"
                 href="#services"
@@ -233,34 +279,11 @@ const Home = () => {
                 Services
               </a>
             </li>
+
             <li
-              className={`active-menu-action ${activeLink === "portfolio" ? "active" : ""
-                }`}>
-              <a
-                className="fade_right"
-                href="#portfolio"
-                onClick={(e) => handleClick(e, "portfolio")}
-              >
-                <img src={PortfolioSvg} alt="home-svg" />
-                Portfolio
-              </a>
-            </li>
-            <li
-              className={`active-menu-action ${activeLink === "pricing" ? "active" : ""
-                }`}
-            >
-              <a
-                className="fade_right"
-                href="#pricing"
-                onClick={(e) => handleClick(e, "pricing")}
-              >
-                <img src={PricingSvg} alt="home-svg" />
-                Pricing
-              </a>
-            </li>
-            <li
-              className={`active-menu-action ${activeLink === "blog" ? "active" : ""
-                }`}
+              className={`active-menu-action ${
+                activeLink === "blog" ? "active" : ""
+              }`}
             >
               <a
                 className="fade_right"
@@ -268,12 +291,13 @@ const Home = () => {
                 onClick={(e) => handleClick(e, "blog")}
               >
                 <img src={BlogSvg} alt="home-svg" />
-                Blog
+                Experience & Impact
               </a>
             </li>
             <li
-              className={`active-menu-action ${activeLink === "contact" ? "active" : ""
-                }`}
+              className={`active-menu-action ${
+                activeLink === "contact" ? "active" : ""
+              }`}
               id="contact-line"
             >
               <a
@@ -324,16 +348,31 @@ const Home = () => {
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
               <h2 className="jessica-main-text zoom_in">
-              Appiah Kubi <span>Samuel</span>
+                Appiah Kubi <span>Samuel</span>
               </h2>
               <h3 className="back-End-dev designer2">
                 {secondTexts[secondTextIndex]}
               </h3>
-              <p className="best fade_down">
-                I specialize in crafting innovative solutions in backend development, design, and advanced geospatial technologies. With a commitment to excellence, I ensure every project reflects precision, creativity, and cutting-edge expertise. Let’s bring your ideas to life and create something truly exceptional together.
+              <p
+                className="best fade_down"
+                style={{
+                  color: "white",
+                  textAlign: "justify",
+                  textJustify: "inter-word",
+                }}
+              >
+                I specialize in building powerful, scalable backend systems,
+                designing intuitive user experiences, and harnessing advanced
+                geospatial technologies to deliver innovative solutions. With a
+                deep commitment to precision, efficiency, and creativity, I
+                transform complex challenges into seamless, high-impact
+                solutions. Whether you need a robust backend, intelligent
+                data-driven insights, or cutting-edge mapping solutions, I bring
+                expertise and innovation to every project. Let’s collaborate and
+                turn your vision into a game-changing reality.
               </p>
 
-              <div className="section-one-btns-main fade_down">
+              {/* <div className="section-one-btns-main fade_down">
                 <div className="wrapper">
                   <Link className="btn-hover" to="#">
                     View Work
@@ -344,7 +383,7 @@ const Home = () => {
                     Contact Me
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-xxl-6 col-lg-6 position-relative">
               <img className="flower" src={FlowerImg} alt="flower" />
@@ -463,6 +502,8 @@ const Home = () => {
         {/* <!-- ====================================== Section Marquee End ===================================== --> */}
         {/* <!-- ====================================== Section About ===================================== --> */}
         <AboutSection />
+
+        <Portfolio />
         {/* <!-- ====================================== Section About End ===================================== --> */}
         {/* <!-- ====================================== Section Education Experience ===================================== --> */}
         <Resume />
@@ -471,13 +512,13 @@ const Home = () => {
         <Services />
         {/* <!-- ====================================== Section Services ===================================== --> */}
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
-        {/* <Portfolio /> */}
+
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
-        {/* <Pricing /> */}
+        <Works />
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
-        {/* <Blog /> */}
+        <Blog />
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
         {/* <!-- ====================================== Section Contact ===================================== --> */}
         <Contact />
