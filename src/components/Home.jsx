@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
-import Profile from "../assets/images/2.jpeg";
+import Profile from "../assets/images/2@.jpeg";
 import ProfileImg from "../assets/images/2.jpg";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
 import BehanceSvg from "../assets/images/svg/behance-svg.svg";
@@ -251,20 +251,7 @@ const Home = () => {
                 Resume
               </a>
             </li>
-            <li
-              className={`active-menu-action ${
-                activeLink === "pricing" ? "active" : ""
-              }`}
-            >
-              <a
-                className="fade_right"
-                href="#pricing"
-                onClick={(e) => handleClick(e, "pricing")}
-              >
-                <img src={PricingSvg} alt="home-svg" />
-                Works
-              </a>
-            </li>
+            
             <li
               className={`active-menu-action ${
                 activeLink === "services" ? "active" : ""
@@ -277,6 +264,20 @@ const Home = () => {
               >
                 <img src={ServicesSvg} alt="home-svg" />
                 Services
+              </a>
+            </li>
+            <li
+              className={`active-menu-action ${
+                activeLink === "pricing" ? "active" : ""
+              }`}
+            >
+              <a
+                className="fade_right"
+                href="#pricing"
+                onClick={(e) => handleClick(e, "pricing")}
+              >
+                <img src={PricingSvg} alt="home-svg" />
+                Works
               </a>
             </li>
 
@@ -387,11 +388,11 @@ const Home = () => {
             </div>
             <div className="col-xxl-6 col-lg-6 position-relative">
               <img className="flower" src={FlowerImg} alt="flower" />
-              <img
+              {/* <img
                 className="circular-img"
                 src={CircularImg}
                 alt="circular-img"
-              />
+              /> */}
               <img
                 className="jessica-main-img zoom_in"
                 src={Profile}

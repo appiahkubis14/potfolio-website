@@ -13,14 +13,14 @@ const Contact = () => {
 
     inputs.forEach((input) => {
       input.addEventListener("focus", () => {
-        input.parentElement.classNameList.add("active");
+        input.parentElement.classList.add("active");  // Changed classNameList to classList
       });
 
       input.addEventListener("focusout", () => {
         if (input.value === "") {
-          input.parentElement.classNameList.remove("active");
+          input.parentElement.classList.remove("active");  // Changed classNameList to classList
         } else {
-          input.parentElement.classNameList.add("active");
+          input.parentElement.classList.add("active");
         }
       });
     });
@@ -40,9 +40,10 @@ const Contact = () => {
       [id]: value,
     }));
   };
+
   return (
     <>
-      {/* <!-- ====================================== Section Contact ===================================== --> */}
+      {/* Section Contact */}
       <section className="contact-section" id="contact">
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
@@ -180,7 +181,7 @@ const Contact = () => {
           </span>
         </div>
       </section>
-      {/* <!-- ====================================== Section Contact End ===================================== --> */}
+      {/* Section Contact End */}
     </>
   );
 };

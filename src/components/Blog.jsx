@@ -35,7 +35,7 @@ const Blog = () => {
               • Launched the app to attendees at the conference.
             </h5>
             <div className="wrapper blog-btn">
-              <a className="btn-hover" href="#blog-popup">
+              {/* <a className="btn-hover" href="#blog-popup">
                 Read More
                 <svg
                   className="btn-arrow-right"
@@ -50,7 +50,7 @@ const Blog = () => {
                     fill="#0F141C"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Blog = () => {
               • Provided personalized support to students struggling with specific subjects, breaking down concepts into easily digestible parts.
             </h5>
             <div className="wrapper blog-btn">
-              <a className="btn-hover" href="#blog-popup">
+              {/* <a className="btn-hover" href="#blog-popup">
                 Read More
                 <svg
                   className="btn-arrow-right"
@@ -92,7 +92,7 @@ const Blog = () => {
                     fill="#0F141C"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ const Blog = () => {
               • Conduct disciplinary hearings when necessary, ensuring due process and impartial judgment.
             </h5>
             <div className="wrapper blog-btn">
-              <a className="btn-hover" href="#blog-popup">
+              {/* <a className="btn-hover" href="#blog-popup">
                 Read More
                 <svg
                   className="btn-arrow-right"
@@ -134,7 +134,7 @@ const Blog = () => {
                     fill="#0F141C"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
