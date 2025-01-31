@@ -43,16 +43,14 @@ import { Link } from "react-router-dom";
 const Home = () => {
   //Text
   const firstTexts = [
-    "Data Analytic",
+    "Data Analyst",
     "Developer",
     "Freelancer",
-    "GIS Analytic",
+    "GIS Analyst",
   ];
   const secondTexts = [
     "Freelancer",
-    "Back-End Web Developer",
     "Full Stack Developer",
-    "Mobile Developer",
     "GIS Analyst",
     "Data Analyst",
   ];
@@ -180,7 +178,7 @@ const Home = () => {
               <FaPhone size={24} style={iconStyle} />
             </Link>
             <Link
-              to="https://www.linkedin.com/in/samuel-appiah-kubi"
+              to="https://www.linkedin.com/in/samuel-appiah-kubi-b52633333/"
               className="profile-media-icons"
             >
               <FaLinkedin size={24} style={iconStyle} />
@@ -348,7 +346,7 @@ const Home = () => {
         <section className="section-one overflow-hidden" id="home">
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
-              <h2 className="jessica-main-text zoom_in">
+              <h2 className="jessica-main-text zoom_in" style={{ fontSize: "50px", color: "white" }}>
                 Appiah Kubi <span>Samuel</span>
               </h2>
               <h3 className="back-End-dev designer2">

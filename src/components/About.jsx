@@ -54,7 +54,7 @@ const AboutSection = () => {
             className="about-detail-info email"
             onClick="location.href='tel:+233593778113'"
           >
-            (+233) 059 377 8113
+            (+233) 59 377 8113
           </p>
         </div>
         <div className="about-detail-main">

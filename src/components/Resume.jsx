@@ -38,7 +38,7 @@ const Resume = () => {
                   <ul>
                     <li>
                       • Developed scalable and dynamic websites using
-                      JavaScript, Django, Python, and jQuery.
+                      JavaScript, Django, Python, jQuery and PostgreSQL
                     </li>
                     <li>
                       • Integrated AWS for cloud services and deployment to
@@ -59,7 +59,7 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Software Engineer-Mobile Developer</p>
+                <p className="bachelor">Software Engineer-Full Stack Developer</p>
                 <p className="cursus university">
                   TRECK Innovation Challenge, Ghana
                 </p>
@@ -67,7 +67,7 @@ const Resume = () => {
                   <ul>
                     <li>
                       • Designed and developed a Pothole Detection and Reporting
-                      mobile app using Flutter and Dart
+                      mobile app using Flutter, Dart , Django , and PostgreSQL
                     </li>
                     <li>
                       • Integrated AI models for real-time and static image
@@ -92,7 +92,7 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Software Engineer-Mobile Developer</p>
+                <p className="bachelor">Software Engineer-Full Stack Developer</p>
                 <p className="cursus university">
                   • Ghana Institution of Surveyors Students Society - GhIS-SS
                 </p>

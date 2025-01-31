@@ -444,58 +444,99 @@
 //   );
 // };
 // export default Portfolio;
-import React, { useEffect, useState } from "react";
-import tensorflow from "../assets/images/4.png";
-import ML from "../assets/images/ML.jpg";
-import tableau from "../assets/images/tableau.jpg";
-import PythonImg from "../assets/images/python.png";
-import TableauImg from "../assets/images/TableauImg.png";
-import OpenCVImg from "../assets/images/OpenCVImg.png";
-import DjangoImg from "../assets/images/DjangoImg.png";
-import QGISImg from "../assets/images/QGISImg.jpeg";
-import GitImg from "../assets/images/GitImg.webp";
-import DatabaseImg from "../assets/images/DatabaseImg.png";
-import js from "../assets/images/js.png";
-import arcgis from "../assets/images/arcgis.png";
+import React, { useEffect, useState, useRef } from "react";
 import "../components/technicalSkills.css";
 
+import pythonImg from "../assets/images/python.png";
+import tensorflowImg from "../assets/images/4.png";
+import sklearnImg from "../assets/images/sklearn.png";
+import tableauImg from "../assets/images/tableau.jpg";
+import openCVImg from "../assets/images/OpenCVImg.png";
+import djangoImg from "../assets/images/DjangoImg.png";
+import flutterImg from "../assets/images/flutter.png";
+import reactImg from "../assets/images/react.png";
+import qgisImg from "../assets/images/QGISImg.jpeg";
+import arcgisImg from "../assets/images/arcgis.png";
+import autocadImg from "../assets/images/autocad.png";
+import drone2mapImg from "../assets/images/drone2map.png";
+import metashapeImg from "../assets/images/metashape.jpeg";
+import gitImg from "../assets/images/GitImg.webp";
+import jupyterImg from "../assets/images/jupyter.webp";
+import pycharmImg from "../assets/images/pycharm.png";
+import vscodeImg from "../assets/images/vscode.png";
+import latexImg from "../assets/images/latex.png";
+import officeImg from "../assets/images/office.png";
+import libreOfficeImg from "../assets/images/libreoffice.jpg";
+import gimpImg from "../assets/images/gimp.png";
+import aws from "../assets/images/aws.png";
+import colabImg from "../assets/images/colab.png";
+import postgresqlImg from "../assets/images/postgresql.png";
+import mysqlImg from "../assets/images/mysql.avif";
+import sqliteImg from "../assets/images/sqlite.png";
+import firebaseImg from "../assets/images/firebase.png";
+import html from "../assets/images/html.png";
+import css from "../assets/images/css.svg";
+import javascript from "../assets/images/js.png";
+
 const skills = [
-  { id: 1, img: PythonImg, label: "Python, R, MATLAB", percentage: 95 },
-  { id: 2, img: TableauImg, label: "Data Visualization", percentage: 90 },
-  { id: 3, img: OpenCVImg, label: "Computer Vision", percentage: 88 },
-  { id: 4, img: DjangoImg, label: "Dart, Flutter, Django", percentage: 92 },
-  { id: 5, img: QGISImg, label: "QGIS, ArcGIS Pro", percentage: 96 },
-  { id: 6, img: GitImg, label: "Git, VSCode", percentage: 85 },
-  { id: 7, img: DatabaseImg, label: "PostgreSQL, MySQL", percentage: 90 },
-  { id: 8, img: js, label: "Javascript, JQuery", percentage: 90 },
-  { id: 9, img: arcgis, label: "ArcGIS Pro", percentage: 90 },
+  { img: pythonImg, name: "Python" },
+  { img: tensorflowImg, name: "TensorFlow" },
+  { img: sklearnImg, name: "Scikit-Learn" },
+  { img: tableauImg, name: "Tableau" },
+  { img: openCVImg, name: "OpenCV" },
+  { img: djangoImg, name: "Django" },
+  { img: flutterImg, name: "Flutter" },
+  { img: reactImg, name: "React" },
+  { img: qgisImg, name: "QGIS" },
+  { img: arcgisImg, name: "ArcGIS Pro" },
+  { img: autocadImg, name: "AutoCAD" },
+  { img: drone2mapImg, name: "Drone2Map" },
+  { img: metashapeImg, name: "Metashape" },
+  { img: gitImg, name: "Git" },
+  { img: jupyterImg, name: "Jupyter" },
+  { img: pycharmImg, name: "PyCharm" },
+  { img: vscodeImg, name: "VSCode" },
+  { img: latexImg, name: "LaTeX" },
+  { img: officeImg, name: "Office" },
+  { img: libreOfficeImg, name: "LibreOffice" },
+  { img: gimpImg, name: "GIMP" },
+  { img: aws, name: "AWS" },
+  { img: colabImg, name: "Google Colab" },
+  { img: postgresqlImg, name: "PostgreSQL" },
+  { img: mysqlImg, name: "MySQL" },
+  { img: sqliteImg, name: "SQLite" },
+  { img: firebaseImg, name: "Firebase" },
+  { img: html, name: "HTML" },
+  { img: css, name: "CSS" },
+  { img: javascript, name: "JavaScript" },
 ];
 
-const Portfolio = () => {
-  const [skillLevels, setSkillLevels] = useState(
-    skills.map((skill) => ({ id: skill.id, currentPercentage: 0 }))
-  );
+const TechnicalSkills = () => {
+  const skillRefs = useRef([]);
 
   useEffect(() => {
-    const intervals = skills.map((skill) => {
-      return setInterval(() => {
-        setSkillLevels((prevLevels) =>
-          prevLevels.map((level) =>
-            level.id === skill.id && level.currentPercentage < skill.percentage
-              ? { ...level, currentPercentage: level.currentPercentage + 1 }
-              : level
-          )
-        );
-      }, 20);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    skillRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
     });
 
-    return () => {
-      intervals.forEach(clearInterval);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="technical-skill-section"  id="portfolio">
+    <section className="technical-skill-section" id="portfolio">
       <div className="heading-container">
         <h2 className="section-heading-text technical-skill-text fade_up">
           Technical Skills
@@ -503,26 +544,25 @@ const Portfolio = () => {
         <div className="line"></div>
       </div>
       <div className="technical-skill-sub-section">
-        {skills.map((skill) => {
-          const currentLevel =
-            skillLevels.find((level) => level.id === skill.id)?.currentPercentage || 0;
-
-          return (
-            <div key={skill.id} className="technical-skills-img-main flip_up">
-              <img
-                src={skill.img}
-                alt={skill.label.toLowerCase().replace(/ /g, "-")}
-              />
-              <div className="skill-counter-main">
-                <p style={{ fontWeight: "bold", fontSize: "20px" }}>{skill.label}</p>
-                {/* <p className="skill-percentage">{currentLevel}%</p> */}
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            ref={(el) => (skillRefs.current[index] = el)}
+            className="technical-skills-img-main"
+          >
+            <div className="technical-skills-img-container">
+              <div className="technical-skills-img front">
+                <img src={skill.img} alt={`skill-${index}`} />
+              </div>
+              <div className="technical-skills-img back">
+                <p>{skill.name}</p>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default TechnicalSkills;
