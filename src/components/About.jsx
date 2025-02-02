@@ -31,7 +31,7 @@ const AboutSection = () => {
         </div>
         <p className="section-sub-text about-sub-text zoom_in">
           With a strong foundation in software development and artificial
-          intelligence, I specialize in design- ing robust software systems,
+          intelligence, I specialize in designing robust software systems,
           developing intelligent algorithms, and integrating backend solutions
           using Python, TensorFlow, Django, and Node.js. I have successfully
           built scalable, data-driven applications and implemented advanced AI
@@ -86,6 +86,30 @@ const AboutSection = () => {
         <div className="about-detail-main">
           <p className="about-detail">Language</p>
           <p className="about-detail-info">English</p>
+        </div>
+        <div className="about-detail-main">
+          <p className="about-detail">Education</p>
+          <p className="about-detail-info">
+            Kwame Nkrumah University of Science and Technolog
+            <p />
+            <p className="about-detail-info">(KNUST)</p>
+
+            <p className="about-detail-info">
+              Bachelor of Science (BS) in Geomatic Engineering
+            </p>
+            <p className="about-detail-info">
+              Graduated with First Class Honours
+            </p>
+            <p className="about-detail-info">
+              Relevant Coursework: Remote Sensing, GIS, Geodesy,
+            </p>
+            <p className="about-detail-info">
+              Photogrammetry, Programming, Astronomy, Cadastral Survey,
+            </p>
+            <p className="about-detail-info">
+              Engineering Survey, and Cartography
+            </p>
+          </p>
         </div>
       </section>
       {/* <!-- ====================================== Section About End ===================================== --> */}

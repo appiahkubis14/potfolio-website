@@ -37,13 +37,14 @@
 
 /* Individual Skill Block */
 .technical-skills-img-main {
-  width: 150px;
-  height: 150px;
-  perspective: 1000px; /* 3D effect */
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  /* 3D effect */
   opacity: 0;
   transform: rotateY(180deg);
   transition: transform 1s ease, opacity 0.8s ease;
-  box-shadow: 0px 10px 30px rgba(105, 105, 105, 0.3);
+  /* box-shadow: 0px 10px 30px rgba(73, 73, 73, 0.3); */
   border-radius: 20px;
 }
 
@@ -109,42 +110,87 @@
 /* Fade-in animation */
 @keyframes fadeInSection {
   from {
-      opacity: 0;
-      transform: translateY(50px);
+    opacity: 0;
+    transform: translateY(50px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Flip animation */
 @keyframes flipIn {
   from {
-      opacity: 0;
-      transform: rotateY(180deg);
+    opacity: 0;
+    transform: rotateY(180deg);
   }
+
   to {
-      opacity: 1;
-      transform: rotateY(0);
+    opacity: 1;
+    transform: rotateY(0);
   }
 }
 
 /* Responsiveness */
 @media (max-width: 1024px) {
   .technical-skill-sub-section {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
+
 }
 
 @media (max-width: 768px) {
   .technical-skill-sub-section {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technical-skills-img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 218%;
+    height: 147%;
+
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media (max-width: 480px) {
   .technical-skill-sub-section {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .technical-skills-img {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220%;
+    height: 130%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .back {
+    background-color: #2ecc71;
+    right: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
   }
 }
