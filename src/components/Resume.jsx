@@ -185,22 +185,36 @@ const Resume = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="education position-relative fade_up">
+            <div className="education position-relative fade_up">
               <div className="side_circle_ring">
                 <div className="small_yellow_border">
                   <div className="small_yellow_circle"></div>
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">JUNIOR DESIGN & DEVELOPMENT</p>
-                <p className="cursus university">Twitter / 2018 - 2019</p>
+                <p className="bachelor">Assistant Mine Surveyor (Intern)</p>
+                <p className="cursus university">
+                  Galiano Gold Mines (Asanko Gold Ghana Limited)
+                </p>
                 <p className="cursus">
-                  Aliquet at interdum pellentesque non fringilla eget orci
-                  suspendisse. A iaculis augue vitae ultricies fusce sit dolor
-                  gravida .
+                  <ul>
+                    <li>
+                      • Conducted topographic and underground surveys using
+                      Total Stations, GPS, and laser scanners
+                    </li>
+                    <li>
+                      • Analyzed survey data using software like ArcGIS, QGIS,
+                      and ArcMap
+                    </li>
+                    <li>
+                      • Processed and analyzed survey data to create accurate
+                      maps of mine sites.
+                    </li>
+                  </ul>
                 </p>
               </div>
-            </div> */}
+            </div>
+            
           </div>
         </div>
       </section>
@@ -237,10 +251,10 @@ const Resume = () => {
 
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-      
+
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Award ===================================== --> */}
-      
+
       {/* <!-- ====================================== Section Award End ===================================== --> */}
     </>
   );

@@ -95,28 +95,8 @@ const AboutSection = () => {
           <p className="about-detail">Language</p>
           <p className="about-detail-info">English</p>
         </div>
-
-
         {/* Education Section */}
-        <div className="about-detail-main">
-          <p className="about-detail">Education</p>
-          <div className="about-education-info">
-            {/* <img src={KNUSTLogo} alt="KNUST-logo" className="education-logo" /> */}
-            <p className="about-detail-info">
-              Kwame Nkrumah University of Science and Technology (KNUST)
-            </p>
-            <p className="about-detail-info">Bachelor of Science (BS) in Geomatic Engineering</p>
-            <p className="about-detail-info">Graduated with First Class Honours</p>
-            <p className="about-detail-info">
-              Relevant Coursework: Remote Sensing, GIS, Geodesy,
-            </p>
-            <p className="about-detail-info">
-            Photogrammetry, Programming, Astronomy
-            </p>
-          </div>
-        </div>
-
-  
+        
       </section>
       {/* ====================================== Section About End ===================================== */}
     </>

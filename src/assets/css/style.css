@@ -94,7 +94,7 @@ ul li {
     position: fixed;
     top: 0;
     left: 0;
-    /* background: #0F141C; */
+    background: #0F141C;
     z-index: 1000;
     overflow: hidden;
     display: flex;
@@ -125,6 +125,7 @@ ul li {
     position: absolute;
     top: 0;
     left: 0;
+    background: #0F141C;
     animation: moveEllipse1 20s linear infinite, changeColor 20s linear infinite;
     width: 340px;
     height: 340px;
@@ -140,6 +141,7 @@ ul li {
     right: 0;
     width: 340px;
     height: 340px;
+    background: #0F141C;
     border-radius: 250px;
     background-color: rgb(255 117 156 / 24%);
     filter: blur(250px);
@@ -264,6 +266,7 @@ ul li {
 
 .profile-img-main img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
 h1 {
@@ -424,7 +427,7 @@ h1 span {
 
 /*-----------------------[ 5.Main Containe and Section One CSS ]------------------------*/
 .main-containe {
-    /* background: #0F141C; */
+    background: #0F141C;
     height: 100vh;
     overflow-x: auto;
     padding-bottom: 0;
@@ -436,12 +439,12 @@ h1 span {
 
 .section-one {
     padding-top: 80px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
 }
 
 .jessica-main-text {
     color: var(--1, #FFF);
-    font-size: 96px;
+    font-size: 70px;
     font-weight: 700;
     line-height: 120px;
 }
@@ -468,7 +471,8 @@ h1 span {
 
 .jessica-main-img {
     max-width: 100%;
-    padding-top: 60px;
+    padding-top: 20px;
+    border-radius: 10px;
 }
 
 .section-one-btns-main {

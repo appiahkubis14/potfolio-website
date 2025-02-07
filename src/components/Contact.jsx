@@ -27,8 +27,8 @@ const Contact = () => {
 
     return () => {
       inputs.forEach((input) => {
-        input.removeEventListener("focus", () => {});
-        input.removeEventListener("focusout", () => {});
+        input.removeEventListener("focus", () => { });
+        input.removeEventListener("focusout", () => { });
       });
     };
   }, []);
@@ -44,7 +44,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch("http://localhost:5000/send-email", {
         method: "POST",
@@ -53,9 +53,9 @@ const Contact = () => {
         },
         body: JSON.stringify(inputState),
       });
-  
+
       const data = await response.json();
-  
+
       if (data.success) {
         alert("Email sent successfully!");
         setInputState({ name: "", email: "", subject: "", message: "" });
@@ -66,7 +66,7 @@ const Contact = () => {
       alert("Error sending email.");
     }
   };
-  
+
 
   return (
     <>
@@ -130,80 +130,72 @@ const Contact = () => {
           </div>
         </div>
         <form onSubmit={handleSubmit}>
-      <div className="form-container">
-        <div className="form">
-          <label htmlFor="name" className="form__label">NAME</label>
-          <input
-            type="text"
-            className="form__input"
-            placeholder="Your name"
-            id="name"
-            required
-            autoComplete="off"
-            value={inputState.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form">
-          <label htmlFor="email" className="form__label">EMAIL</label>
-          <input
-            type="email"
-            className="form__input"
-            placeholder="Your email"
-            id="email"
-            required
-            autoComplete="off"
-            value={inputState.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form subject-input-main">
-          <label htmlFor="subject" className="form__label">SUBJECT</label>
-          <input
-            type="text"
-            className="form__input"
-            placeholder="Your subject"
-            id="subject"
-            required
-            autoComplete="off"
-            value={inputState.subject}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form">
-          <label htmlFor="message" className="form__label">MESSAGE</label>
-          <textarea
-            className="form__input"
-            placeholder="Write your text..."
-            id="message"
-            required
-            autoComplete="off"
-            value={inputState.message}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
+          <div className="form-container">
+            <div className="form">
+              <label htmlFor="name" className="form__label">NAME</label>
+              <input
+                type="text"
+                className="form__input"
+                placeholder="Your name"
+                id="name"
+                required
+                autoComplete="off"
+                value={inputState.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form">
+              <label htmlFor="email" className="form__label">EMAIL</label>
+              <input
+                type="email"
+                className="form__input"
+                placeholder="Your email"
+                id="email"
+                required
+                autoComplete="off"
+                value={inputState.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form subject-input-main">
+              <label htmlFor="subject" className="form__label">SUBJECT</label>
+              <input
+                type="text"
+                className="form__input"
+                placeholder="Your subject"
+                id="subject"
+                required
+                autoComplete="off"
+                value={inputState.subject}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form">
+              <label htmlFor="message" className="form__label">MESSAGE</label>
+              <textarea
+                className="form__input"
+                placeholder="Write your text..."
+                id="message"
+                required
+                autoComplete="off"
+                value={inputState.message}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
 
-      <div className="wrapper blog-btn">
-        <button type="submit" className="btn-hover">Submit Now</button>
-      </div>
-    </form>
-        {/* <iframe
-          className="map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11661.278162829134!2d-76.16113884753138!3d43.0557465765357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3add89232d3%3A0x516c4febad79a023!2sNear%20Northeast%2C%20Syracuse%2C%20NY%2013203%2C%20USA!5e0!3m2!1sen!2sin!4v1704092010021!5m2!1sen!2sin"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe> */}
+          <div className="wrapper blog-btn">
+            <button type="submit" className="btn-hover">Submit Now</button>
+          </div>
+        </form>
         <iframe
           className="map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5124.011059682002!2d-0.17861002401584825!3d5.570059433506106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9b1f9bef6453%3A0x7208b9f47d96d41d!2sAfarinick%20Company%20Limited!5e1!3m2!1sen!2sgh!4v1738310330284!5m2!1sen!2sgh"
-  
-          style={{ border: 0 }} // Change this from string to object
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.953925941509!2d-0.2833242374495092!3d5.689555907790582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9fe4a171ffa1%3A0x5c8c33702991df80!2sPokuase%20Overhead%20Accra%20side!5e1!3m2!1sen!2sgh!4v1738410383655!5m2!1sen!2sgh" 
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        />
+        ></iframe>
+        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.953925941509!2d-0.2833242374495092!3d5.689555907790582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9fe4a171ffa1%3A0x5c8c33702991df80!2sPokuase%20Overhead%20Accra%20side!5e1!3m2!1sen!2sgh!4v1738410383655!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
 
         <div className="footer">
           © 2025 | All rights reserved by

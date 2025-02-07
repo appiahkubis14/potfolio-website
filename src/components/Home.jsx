@@ -363,7 +363,7 @@ const Home = () => {
         <section className="section-one overflow-hidden" id="home">
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
-              <h2 className="jessica-main-text zoom_in" style={{ fontSize: "50px", color: "white" }}>
+              <h2 className="jessica-main-text zoom_in" style={{ fontSize: "40px", color: "white" }}>
                 Appiah Kubi <span>Samuel</span>
               </h2>
               <h3 className="back-End-dev designer2">
@@ -411,9 +411,9 @@ const Home = () => {
               <img
                 className="jessica-main-img zoom_in"
                 src={Profile}
-                alt="jessica-main-img"
+                alt="jessica-main-img" 
               />
-              <div className="worked-box">
+              {/* <div className="worked-box">
                 <p className="worked-more">Worked with more than 3 people</p>
                 <div className="client-img-main position-relative">
                   <img
@@ -442,7 +442,7 @@ const Home = () => {
                   />
                   <p className="worked-more worked-more2"> 5 Clients</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
