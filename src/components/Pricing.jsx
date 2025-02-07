@@ -42,7 +42,7 @@ const Pricing = () => {
         <div className="pricing-section-main zoom_in">
           <div className="basic-plain-box-main">
             <div className="basic-plain-box">
-              <img src={BasicPlanSvg} alt="education-icon" style={{borderRadius: "10px"}}/>
+              <img src={BasicPlanSvg} alt="education-icon" style={{borderRadius: "10px", width: "100%",height: "100%"}}/>
               <p className="basic-plain-text">Academic Background</p>
             </div>
             <div className="basic-plain-box-sub">

@@ -101,9 +101,13 @@
 }
 
 .technical-skills-img-main img {
-  max-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 50px;
   height: auto;
-  margin-bottom: 20px;
+  /* margin-bottom: 10px; */
 }
 
 /* Fade-in animation */
