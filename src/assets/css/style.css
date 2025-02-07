@@ -1379,6 +1379,7 @@ h1 span {
 
 /*-----------------------[ 15.Gallery CSS ]------------------------*/
 .main .container {
+    background: #0F141C;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;

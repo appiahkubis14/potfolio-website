@@ -29,7 +29,7 @@
 /* Technical Skills Subsection */
 .technical-skill-sub-section {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 30px;
   justify-content: center;
   margin-top: 20px;
