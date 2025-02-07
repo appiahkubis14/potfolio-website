@@ -114,6 +114,7 @@ ul li {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100%;
     position: relative;
     overflow: hidden;
     z-index: 0;

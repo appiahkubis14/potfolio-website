@@ -37,13 +37,13 @@
 
 /* Individual Skill Block */
 .technical-skills-img-main {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   perspective: 1000px; /* 3D effect */
   opacity: 0;
   transform: rotateY(180deg);
   transition: transform 1s ease, opacity 0.8s ease;
-  box-shadow: 0px 10px 30px rgba(105, 105, 105, 0.3);
+  box-shadow: 0px 10px 30px rgba(70, 69, 69, 0.3);
   border-radius: 20px;
 }
 
@@ -148,3 +148,7 @@
       grid-template-columns: 1fr;
   }
 }
+
+
+
+

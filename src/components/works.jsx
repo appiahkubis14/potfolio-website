@@ -25,7 +25,7 @@ import arcgis from "../assets/images/arcgis.png";
 
 const Works = () => {
     return (
-        <section className="awards-section overflow-hidden" id="pricing">
+        <section className="awards-section overflow-hidden" id="works">
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
             Works
@@ -45,7 +45,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2024</p>
                     </div>
                     <p className="award-interior">
                       Crop Detection and Counting
@@ -80,7 +80,7 @@ const Works = () => {
                         style={{ width: "20%" }}
                       />
 
-                      <p className="award-yer">2025</p>
+                      <p className="award-yer">2023</p>
                     </div>
                     <p className="award-interior">GhISS-SS Mobile App</p>
                     <p className="award-winner-text">
@@ -114,7 +114,7 @@ const Works = () => {
                         alt="winner-award2"
                         style={{ width: "20%" }}
                       />
-                      <p className="award-yer">2024</p>
+                      <p className="award-yer">2025</p>
                     </div>
                     <p className="award-interior">
                       Admin Manager App for Afarinick Company Limited
@@ -149,7 +149,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2025</p>
                     </div>
                     <p className="award-interior">
                       Afarinick Company Limited Website
@@ -167,6 +167,7 @@ const Works = () => {
                       their GIS and mapping services. Built and maintained a
                       robust Django backend with PostgreSQL integration for
                       efficient data handling and content storage.
+                      <br />
                       <a
                         href="https://afarinick.com"
                         target="_blank"
@@ -192,13 +193,13 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2025</p>
                     </div>
                     <p className="award-interior">
                       Tote Bag E-commerce Website
                     </p>
                     <p className="award-winner-text">
-                      Django, UltrHOst Ghana, Paystack
+                      Django, UltrHOst Ghana, Paystack , AWS , PostgreSQL
                     </p>
                   </div>
                 </div>
@@ -209,6 +210,14 @@ const Works = () => {
                       specializing in tote bag sales. Integrated Paystack for
                       secure payments and AWS for scalable hosting. Used jQuery
                       for dynamic UI elements.
+                      <br />
+                      <a
+                        href="https://gbekearthub.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Website
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -227,7 +236,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2023</p>
                     </div>
                     <p className="award-interior">Hospital Finder App</p>
                     <p className="award-winner-text">
@@ -259,7 +268,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2024</p>
                     </div>
                     <p className="award-interior">
                       Pothole Detection and Report App
@@ -296,7 +305,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "30%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2024</p>
                     </div>
                     <p className="award-interior">
                       Sales Prediction with Machine Learning
@@ -331,7 +340,7 @@ const Works = () => {
                         alt="winner-award4"
                         style={{ width: "45%" }}
                       />
-                      <p className="award-yer">2022</p>
+                      <p className="award-yer">2024</p>
                     </div>
                     <p className="award-interior">
                       Tableau Retail Sales Dashboard

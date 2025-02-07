@@ -1,5 +1,5 @@
 import React from "react";
-import BasicPlanSvg from "../assets/images/svg/basic-plain.svg";
+import BasicPlanSvg from "../assets/images/knust.jpg";
 import StandardPlanSvg from "../assets/images/svg/strandard-plan.svg";
 import GoldPlanSvg from "../assets/images/svg/gold-plan.svg";
 import ColanIcon from "../assets/images/svg/colan-icon.svg";
@@ -29,115 +29,60 @@ const Pricing = () => {
     ],
   };
 
-  
-  
   return (
     <>
       {/* <!-- ====================================== Section Pricing ===================================== --> */}
       <section className="Pricing-section" id="pricing">
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
-            Pricing.
+            Education.
           </h2>
           <div className="line"></div>
         </div>
         <div className="pricing-section-main zoom_in">
           <div className="basic-plain-box-main">
             <div className="basic-plain-box">
-              <img src={BasicPlanSvg} alt="basic-plain" />
-              <p className="basic-plain-text">Basic Plan</p>
+              <img src={BasicPlanSvg} alt="education-icon" style={{borderRadius: "10px"}}/>
+              <p className="basic-plain-text">Academic Background</p>
             </div>
             <div className="basic-plain-box-sub">
-              <p className="mon">
-                25<sup>$</sup>
-                <span>/mon</span>
-              </p>
+              <p className="mon">KNUST</p>
             </div>
           </div>
           <div className="development-box">
             <div>
-              <h3 className="pricing-plaines-name">Web Development</h3>
-              <h3 className="pricing-plaines-name">Mobile Development</h3>
-              <h3 className="pricing-plaines-name">Advertising</h3>
-              <h3 className="pricing-plaines-name">Graphic Design</h3>
-              <h3 className="pricing-plaines-name">Project Management</h3>
+              <h3 className="pricing-plaines-name">
+                Bachelor of Science (BS) in Geomatic Engineering
+              </h3>
+              <h3 className="pricing-plaines-name">
+                Graduated with First Class Honours
+              </h3>
+              <h3 className="pricing-plaines-name">Remote Sensing</h3>
+              <h3 className="pricing-plaines-name">GIS & Geodesy</h3>
+              <h3 className="pricing-plaines-name">
+                Photogrammetry & Astronomy
+              </h3>
+              <h3 className="pricing-plaines-name">Programming</h3>
             </div>
             <div className="choose-plain-btn-main">
               <div className="wrapper">
-                <a className="btn-hover" href="#">
-                  Choose Plan
+                <a className="btn-hover" href="https://www.knust.edu.gh/">
+                KNUST
+                  
                 </a>
               </div>
-              <p className="taxes">10% taxes will include after make price</p>
-            </div>
-          </div>
-        </div>
-        <div className="pricing-section-main zoom_in">
-          <div className="basic-plain-box-main">
-            <div className="basic-plain-box basic-plain-box2">
-              <img src={StandardPlanSvg} alt="strandard-plan" />
-              <p className="basic-plain-text">Standard Plan</p>
-            </div>
-            <div className="basic-plain-box-sub">
-              <p className="mon">
-                75<sup>$</sup>
-                <span>/mon</span>
-              </p>
-            </div>
-          </div>
-          <div className="development-box">
-            <div>
-              <h3 className="pricing-plaines-name">Web Development</h3>
-              <h3 className="pricing-plaines-name">Mobile Development</h3>
-              <h3 className="pricing-plaines-name">Advertising</h3>
-              <h3 className="pricing-plaines-name">Graphic Design</h3>
-              <h3 className="pricing-plaines-name">Project Management</h3>
-            </div>
-            <div className="choose-plain-btn-main">
-              <div className="wrapper">
-                <a className="btn-hover" href="#">
-                  Choose Plan
-                </a>
-              </div>
-              <p className="taxes">10% taxes will include after make price</p>
-            </div>
-          </div>
-        </div>
-        <div className="pricing-section-main mb-0 zoom_in">
-          <div className="basic-plain-box-main">
-            <div className="basic-plain-box basic-plain-box3">
-              <img src={GoldPlanSvg} alt="gold-plan" />
-              <p className="basic-plain-text">Gold Plan</p>
-            </div>
-            <div className="basic-plain-box-sub">
-              <p className="mon">
-                125<sup>$</sup>
-                <span>/mon</span>
-              </p>
-            </div>
-          </div>
-          <div className="development-box">
-            <div>
-              <h3 className="pricing-plaines-name">Web Development</h3>
-              <h3 className="pricing-plaines-name">Mobile Development</h3>
-              <h3 className="pricing-plaines-name">Advertising</h3>
-              <h3 className="pricing-plaines-name">Graphic Design</h3>
-              <h3 className="pricing-plaines-name">Project Management</h3>
-            </div>
-            <div className="choose-plain-btn-main">
-              <div className="wrapper">
-                <a className="btn-hover" href="#">
-                  Choose Plan
-                </a>
-              </div>
-              <p className="taxes">10% taxes will include after make price</p>
+              <p className="taxes">Relevant coursework and skills acquired</p>
+              <h3 className="pricing-plaines-name">Software Development</h3>
+              <h3 className="pricing-plaines-name">GIS Analyst</h3>
+              <h3 className="pricing-plaines-name">Data Analyst</h3>
             </div>
           </div>
         </div>
       </section>
+
       {/* <!-- ====================================== Section Pricing End ===================================== --> */}
       {/* <!-- ====================================== Section Testimonials ===================================== --> */}
-      <section className="testimonials-section">
+      {/* <section className="testimonials-section">
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
             Testimonials.
@@ -204,7 +149,7 @@ const Pricing = () => {
             <p className="kello">Kello Auxa</p>
           </div>
         </Slider>
-      </section>
+      </section> */}
       {/* <!-- ====================================== Section Testimonials ===================================== --> */}
     </>
   );

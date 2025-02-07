@@ -21,7 +21,7 @@ import clientImg4 from "../assets/images/clients-img4.jpg";
 import JessicaMainImg from "../assets/images/1.jpeg";
 import CircularImg from "../assets/images/circular-img.png";
 import FlowerImg from "../assets/images/flower.png";
-import BrandLogo1 from "../assets/images/brand-logo1.png";
+import avatar from "../assets/images/avatar.png";
 import BrandLogo2 from "../assets/images/brand-logo2.png";
 import BrandLogo3 from "../assets/images/brand-logo3.png";
 import BrandLogo4 from "../assets/images/brand-logo4.png";
@@ -36,15 +36,17 @@ import Portfolio from "./Portfolio";
 import Works from "./works";
 import Blog from "./Blog";
 import Contact from "./Contact";
+import price from "./Pricing";
 import $ from "jquery";
 import CV from "../assets/pdf/Samuel_Appiah_Kubi_CV_Final_January_update.pdf";
 import { Link } from "react-router-dom";
+import Pricing from "./Pricing";
 
 const Home = () => {
   //Text
   const firstTexts = [
     "Data Analyst",
-    "Developer",
+    "Software Developer",
     "Freelancer",
     "GIS Analyst",
   ];
@@ -163,9 +165,9 @@ const Home = () => {
       <div className="side-menu">
         <div className="profile-img-main">
           <img className="zoom_in" src={ProfileImg} alt="profile-img" />
-          {/* <h1 className="fade_up">
-            Samuel <span>Appiah Kubi</span>
-          </h1> */}
+          <h1 className="fade_up">
+            Samuel
+          </h1>
           <h2 className="designer fade_up">{firstTexts[firstTextIndex]}</h2>
           <div className="profile-media-icons-main fade_up">
             <Link
@@ -221,6 +223,21 @@ const Home = () => {
                 About
               </a>
             </li>
+
+            <li
+              className={`active-menu-action ${
+                activeLink === "pricing" ? "active" : ""
+              }`}
+            >
+              <a
+                className="fade_right"
+                href="#pricing"
+                onClick={(e) => handleClick(e, "pricing")}
+              >
+                <img src={PricingSvg} alt="home-svg" />
+                Education
+              </a>
+            </li>
             <li
               className={`active-menu-action ${
                 activeLink === "portfolio" ? "active" : ""
@@ -271,10 +288,10 @@ const Home = () => {
             >
               <a
                 className="fade_right"
-                href="#pricing"
-                onClick={(e) => handleClick(e, "pricing")}
+                href="#works"
+                onClick={(e) => handleClick(e, "works")}
               >
-                <img src={PricingSvg} alt="home-svg" />
+                <img src={BehanceSvg} alt="home-svg" />
                 Works
               </a>
             </li>
@@ -401,23 +418,27 @@ const Home = () => {
                 <div className="client-img-main position-relative">
                   <img
                     className="client-img client-img1"
-                    src={clientImg1}
+                    src={avatar}
                     alt="clients-img1"
+                    style={{ width: "50px" }}
                   />
                   <img
                     className="client-img client-img2"
-                    src={clientImg2}
+                    src={avatar}
                     alt="clients-img2"
+                    style={{ width: "50px" }}
                   />
                   <img
                     className="client-img client-img3"
-                    src={clientImg3}
+                    src={avatar}
                     alt="clients-img3"
+                    style={{ width: "50px" }}
                   />
                   <img
                     className="client-img client-img4"
-                    src={clientImg4}
+                    src={avatar}
                     alt="clients-img4"
+                    style={{ width: "50px" }}
                   />
                   <p className="worked-more worked-more2"> 5 Clients</p>
                 </div>
@@ -501,7 +522,7 @@ const Home = () => {
         {/* <!-- ====================================== Section Marquee End ===================================== --> */}
         {/* <!-- ====================================== Section About ===================================== --> */}
         <AboutSection />
-
+        <Pricing />
         <Portfolio />
         {/* <!-- ====================================== Section About End ===================================== --> */}
         {/* <!-- ====================================== Section Education Experience ===================================== --> */}
@@ -511,7 +532,7 @@ const Home = () => {
         <Services />
         {/* <!-- ====================================== Section Services ===================================== --> */}
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
-
+          
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
         <Works />
